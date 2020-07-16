@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workoutviewcontainer"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:backgroundTint="#2C3E50 "
+    android:padding="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="15dp"
+    app:cardElevation="15dp"
+
+
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/ripple"
+
+        android:padding="5dp">
+
+        <ImageView
+
+            android:id="@+id/random_image_view"
+            android:layout_width="232dp"
+            android:layout_height="240dp"
+            android:src="@drawable/logotrans"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.029">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/random_workout_name"
+            android:layout_width="145dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:text="here will be "
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/random_image_view"></TextView>
+
+        <TextView
+            android:id="@+id/random_workout_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="3 min"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20dp"
+
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/random_workout_name"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

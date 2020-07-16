@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EA7773"
+    tools:context=".daywiseworkout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contstraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="535dp">
+
+
+        <TextView
+            android:id="@+id/daily_text_view"
+            android:layout_width="115dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:text="day"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#356"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/textView4"
+            android:layout_width="170dp"
+            android:layout_height="44dp"
+            android:text="scroll this dude..."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/daily_text_view">
+
+        </TextView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView2"
+            android:layout_width="399dp"
+            android:layout_height="336dp"
+            android:layout_marginBottom="64dp"
+            android:background="#2c3e50"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/daily_workout_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+
+
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/workoutbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button"
+
+            android:elevation="30dp"
+            android:padding="15dp"
+            android:text="START WORKOUT"
+            android:textColor="#EA7773"
+            android:backgroundTint="#2C3E50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/nestedScrollView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/music_select_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center_horizontal"
+        android:layout_margin="30dp"
+        android:baselineAlignBottom="true"
+        android:contentDescription="add music"
+        android:src="@drawable/ic_music_note_black_24dp"
+        app:backgroundTint="#fff"
+        app:fabSize="auto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
